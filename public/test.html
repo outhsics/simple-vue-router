@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>call</title>
+  </head>
+  <body>
+    <!-- <a href="#/home">home</a>
+    <a href="#/about">about</a> -->
+    <a onclick="go('/home')">home</a>
+    <a onclick="go('/about')">about</a>
+    <div id="html"></div>
+    <script>
+      //   window.addEventListener("load", () => {
+      //     html.innerHTML = location.hash.slice(1);
+      //   });
+
+      //   window.addEventListener("hashchange", () => {
+      //     html.innerHTML = location.hash.slice(1);
+      //   });
+      function go(pathname) {
+        history.pushState({}, null, pathname);
+        html.innerHTML = pathname;
+      }
+      //   window.addEventListener("popstate", () => {
+      //     go(location.pathname);
+      //   });
+    </script>
+  </body>
+</html>
